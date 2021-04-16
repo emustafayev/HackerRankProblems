@@ -1,6 +1,5 @@
 package problem_solving.HackerRank;
 
-import org.jetbrains.annotations.NotNull;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -51,7 +50,7 @@ public class AlternatingCharacters {
 
     }
 
-    private static <A,T> A fold(@NotNull Iterable<T> it, A initial, BiFunction<A,T,A> f){
+    private static <A,T> A fold(Iterable<T> it, A initial, BiFunction<A,T,A> f){
         Iterator<T> data = it.iterator();
         A acc = initial;
         while (data.hasNext()){
@@ -61,7 +60,7 @@ public class AlternatingCharacters {
         return acc;
     }
 
-    private static List<Character> sToList(@NotNull String s){
+    private static List<Character> sToList( String s){
         return s.chars()
                 .mapToObj(ch->(char)ch)
                 .collect(Collectors.toList());
