@@ -11,11 +11,14 @@ public class SockMerchant {
     }
 
     static int sockMerchant(int n, int[] ar) {
-        return Arrays.stream(ar).boxed()
+        return Arrays.stream(ar)
+                .boxed()
                 .collect(Collectors.groupingBy(i -> i))
-                .values().stream()
-                .mapToInt(List::size).boxed()
-                .mapToInt(socks->socks/2).sum();
-
+                .values()
+                .stream()
+                .mapToInt(List::size)
+                .boxed()
+                .mapToInt(socks->socks/2)
+                .sum();
     }
 }
