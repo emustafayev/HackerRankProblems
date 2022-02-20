@@ -17,7 +17,7 @@ public class IntegerToRoman {
 
         for (int i = 0; i < nums.length; i++) {  //347   // CCCXLVII
             // Go until we can divide;
-            if (num / nums[i] > 0) { // 1. 347 / 100
+            while (num / nums[i] > 0) { // 1. 347 / 100 ; while help to optimize, so we can use if too
                 // How many times that digit can be divided?
                 int romanDigit = num / nums[i];
                 // Add repititions
