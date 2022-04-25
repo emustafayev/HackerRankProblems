@@ -21,8 +21,8 @@ public class AlmostSorted {
         }
 
         int i, j;
-        for (i = 0; i < n - 1 && d[i] < d[i + 1]; ++i) ;
-        for (j = n - 1; j > 0 && d[j - 1] < d[j]; --j) ;
+        for (i = 0; i < n - 1 && d[i] < d[i + 1]; ++i) ; // trim until there is unsorted section
+        for (j = n - 1; j > 0 && d[j - 1] < d[j]; --j) ; // trim until there is unsorted section in reverse order
         System.out.println(i + " " + j);
 
         //try swap
