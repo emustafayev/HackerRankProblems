@@ -3,11 +3,8 @@ package problem_solving.HackerRank;
 import java.util.Arrays;
 
 public class Anagram2 {
-
     public static void main(String[] args) {
-
         System.out.println(anagram("aaabbb"));
-
     }
 
 
@@ -23,8 +20,9 @@ public class Anagram2 {
             arr[s1.charAt(i)%26]++;
             arr[s2.charAt(i)%26]--;
         }
-        int sum = Arrays.stream(arr).filter(i -> i > 0).sum();
-        return sum;
+        return Arrays.stream(arr)
+                .filter(i -> (i > 0))
+                .sum();
 
     }
 
