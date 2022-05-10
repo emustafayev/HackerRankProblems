@@ -19,7 +19,7 @@ public class MoveZeroes {
             if (nums[i] == 0) {
                 zeroCount++;
             } else if (zeroCount > 0) {
-                swap(nums, i, i - zeroCount);  // menimle 3 evvelki indexdekini deyisdir. 3 evveldeki index 0 olur hemise(0 sayi qeder get geriye)
+                swap(nums, i, i - zeroCount);  // menimle <zeroCount> evvelki indexdekini deyisdir. <zeroCount> evveldeki index 0 olur hemise(0 sayi qeder get geriye)
             }
         }
     }
