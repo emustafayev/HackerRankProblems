@@ -6,9 +6,7 @@ import java.util.List;
 public class PhoneNumberCombinationLetter {
 
     public static void main(String[] args) {
-
         System.out.println(letterCombinations(""));
-
     }
 
     private static final String[] KEYS = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
@@ -30,5 +28,4 @@ public class PhoneNumberCombinationLetter {
             combine(prefix + letters.charAt(i),res,digits,offset+1);
         }
     }
-
 }
