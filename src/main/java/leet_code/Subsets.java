@@ -7,7 +7,7 @@ import java.util.List;
 public class Subsets {
 
     public static void main(String[] args) {
-
+        System.out.println(subsets(new int[]{1,2,3}));
     }
 
     public static List<List<Integer>> subsets(int[] nums) {
@@ -23,7 +23,9 @@ public class Subsets {
 
         for(int i = start; i < nums.length; i++){
             tempList.add(nums[i]);
+            System.out.println("before " + tempList);
             backtrack(list, tempList, nums, i + 1);
+            System.out.println(tempList);
             tempList.remove(tempList.size() - 1);
         }
 
