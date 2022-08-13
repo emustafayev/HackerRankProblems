@@ -1,8 +1,14 @@
 package algorithms.backtracking;
 
+/**
+ * Given a N*N board with the Knight placed on the first block of an empty board.
+ * Moving according to the rules of chess knight must visit each square exactly once.
+ * Print the order of each cell in which they are visited.
+ */
+
+
 public class KNightTour {
     static int N = 8;
-
 
     static boolean isSafe(int x, int y, int sol[][]) {
         return (x >= 0 && x < N && y >= 0 && y < N
@@ -50,30 +56,30 @@ public class KNightTour {
     /* A recursive utility function to solve Knight
        Tour problem */
     private static boolean solveKTUtil(int x, int y, int moveIndex, int[][] board, int[] xMove, int[] yMove) {
-        if (moveIndex == N * N)
-            return true;
+
+        if (moveIndex == N * N) return true; // backtracking  == >  success case
 
         int nextX, nextY;
 
-        for (int k = 0; k < 8; k++) {
-            nextX = x + xMove[k];
-            nextY = y + yMove[k];
+        for (int i = 0; i < xMove.length; i++) { //  we walk through all the moves.
 
-            if (isSafe(nextX, nextY, board)) {
+            nextX = x + xMove[i];
+            nextY = y + yMove[i];
+
+            if (isSafe(nextX,nextY, board)) {
+
                 board[nextX][nextY] = moveIndex;
-                if (solveKTUtil(nextX,nextY, moveIndex + 1, board, xMove, yMove)){
-                    return true;
-                }else
-                    board[nextX][nextY] = -1; // backtrack if solveKTUtil returns false
-                    //return false;
 
-            } //else return false;
+                if (solveKTUtil(nextX, nextY,moveIndex + 1,board,xMove,yMove))
+                    return true;
+                else board[nextX][nextY] = -1;
+            }
         }
         return false;
     }
 
     public static void main(String[] args) {
-        solveKT(5,7);
+        solveKT(3,5);
     }
 
 }

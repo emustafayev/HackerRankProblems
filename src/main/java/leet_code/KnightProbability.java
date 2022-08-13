@@ -39,7 +39,8 @@ public class KnightProbability {
 
         if (K == 0) return 1;  //  remains on the board after it has stopped moving.  // probability 1 so it nailed to survive;
 
-        if(dp[r][c][K] != 0) return dp[r][c][K];  // if previously calculated
+        if(dp[r][c][K] != 0) return dp[r][c][K];  // if previously calculated; without this line, leetcode will give us time limit exception.
+        // Only difference from previous solution is this line. We just don't calculate duplicated moves
 
 
         double rate = 0;
