@@ -48,6 +48,8 @@ public class PowerSum {
         if (power(i, X) < N) {
             //calling the sum function with next natural number after backtracking if when it is raised to X is still less than X.
             Sum(N, X, i + 1);
+        } else if (power(i, X) > N) {
+            return; // Returning if there is no solutions
         }
     }
 
