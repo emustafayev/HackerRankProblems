@@ -10,7 +10,12 @@ import java.util.List;
  * other. Ex. N = 6 Solution= There are 4 possible ways Arrangement: 1 ".Q....",
  * "...Q..", ".....Q", "Q.....", "..Q...", "....Q."
  * <p>
- * Arrangement: 2 "..Q...", ".....Q", ".Q....", "....Q.", "Q.....", "...Q.."
+ * Arrangement: 2 "..Q...",
+ *                ".....Q",
+ *                ".Q....",
+ *                "....Q.",
+ *                "Q.....",
+ *                "...Q.."
  * <p>
  * Arrangement: 3 "...Q..", "Q.....", "....Q.", ".Q....", ".....Q", "..Q..."
  * <p>
@@ -53,7 +58,7 @@ public class NQueens {
             System.out.println("Arrangement for placing " + queens + " queens");
         }
         arrangements.forEach(arrangement -> {
-            arrangement.forEach(row -> System.out.println(row));
+            arrangement.forEach(System.out::println);
             System.out.println();
         });
     }
