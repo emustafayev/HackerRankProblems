@@ -5,8 +5,12 @@ import java.util.Arrays;
 public class BigSorting {
 
     public static void main(String[] args) {
-        String[] arr  = new String[]{"1","100","234567","5"};
-        System.out.println(Arrays.toString(bigSorting(arr)));
+        var reg = "^[\\d]{9}[12]$";
+
+        System.out.println("1111111112".matches(reg));
+
+//        String[] arr  = new String[]{"1","100","234567","5"};
+//        System.out.println(Arrays.toString(bigSorting(arr)));
     }
 
     // Complete the bigSorting function below.

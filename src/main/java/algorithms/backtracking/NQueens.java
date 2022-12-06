@@ -17,7 +17,12 @@ import java.util.List;
  *                "Q.....",
  *                "...Q.."
  * <p>
- * Arrangement: 3 "...Q..", "Q.....", "....Q.", ".Q....", ".....Q", "..Q..."
+ * Arrangement: 3 "...Q..",
+ *                "Q.....",
+ *                "....Q.",
+ *                ".Q....",
+ *                ".....Q",
+ *                "..Q..."
  * <p>
  * Arrangement: 4 "....Q.", "..Q...", "Q.....", ".....Q", "...Q..", ".Q...."
  *
@@ -71,7 +76,7 @@ public class NQueens {
      * @param columns: columns[i] = rowId where queen is placed in ith column.
      * @param columnIndex: This is the column in which queen is being placed
      */
-    private static void getSolution(int boardSize, List<List<String>> solutions, int[] columns, int columnIndex) {
+    private static void getSolution(int boardSize, List<List<String>> solutions, int[] columns, int columnIndex) { // 4
         if (columnIndex == boardSize) {
             // this means that all queens have been placed
             List<String> sol = new ArrayList<String>();
