@@ -1,5 +1,9 @@
 package algorithms;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.List;
 
@@ -24,7 +28,7 @@ public class Test {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws JsonProcessingException {
         List<Testing> list = Arrays.asList(new Testing("II"), new Testing("JJ"), new Testing("HJ"));
 
         list.forEach(Testing::updateValue);
