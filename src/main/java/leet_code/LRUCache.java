@@ -9,7 +9,6 @@ public class LRUCache {
 
     }
 
-
     private final HashMap<Integer, Node> map;
     private final Node head = new Node();
     private final Node tail = new Node();
@@ -26,11 +25,10 @@ public class LRUCache {
         int res = -1;
         Node node = map.get(key);
         if (node != null) {
-            res = node.value;
             remove(node);
+            res = node.value;
             insert(node);
         }
-
         return res;
     }
 
@@ -42,27 +40,31 @@ public class LRUCache {
             insert(node);
         } else {
             if (map.size() == cache_capacity) {
+                //map is full remove the least used node
+                //The least used node is on tail of prev
                 map.remove(tail.prev.key);
-                remove(tail.prev);
-            }
+                remove(tail.prev); // remove method will remove prev of tail and connect remaining least node to tail again
+            }// ready to add
             Node newNode = new Node(key, value);
             map.put(key, newNode);
-            insert(newNode);
+            insert(newNode);//insert to head, because we have new node and needs to be in list
         }
     }
 
-    private void insert(Node node) {
-        Node headNext = head.next; // tail
-        // put node between head and tail
+
+    public void insert(Node node) {
+        //insert to head
+        Node headNext = head.next;
         head.next = node;
         node.prev = head;
         node.next = headNext;
         headNext.prev = node;
     }
 
-    private void remove(Node node) {
-        Node nextNode = node.next;
+    public void remove(Node node) {
         Node prevNode = node.prev;
+        Node nextNode = node.next;
+
         prevNode.next = nextNode;
         nextNode.prev = prevNode;
     }
