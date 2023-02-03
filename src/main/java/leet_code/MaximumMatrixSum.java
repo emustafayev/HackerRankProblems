@@ -19,7 +19,7 @@ public class MaximumMatrixSum {
     }
 
     public static long maxMatrixSum(int[][] matrix) {
-        int sum = 0;
+        long sum = 0;
         int n = matrix.length;
         int min = Integer.MAX_VALUE;
         int countNeg = 0;
