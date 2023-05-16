@@ -1,6 +1,6 @@
 # Repository for Programming Solutions
 
-###HackerRankProblems
+### HackerRankProblems
  - Problem solving
-###LeetCode
+### LeetCode
  - Problems
