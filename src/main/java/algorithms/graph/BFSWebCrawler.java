@@ -47,33 +47,6 @@ public class BFSWebCrawler {
             }
         }
 
-
-//
-//        queue.add(root);
-//        visited.add(root);
-//
-//        while (!queue.isEmpty()) {
-//
-//            String url = queue.poll();
-//
-//            String rawHtml = readURL(url);
-//            String regexp = "https://(\\w+\\.)*(\\w+)";
-//            Pattern pattern = Pattern.compile(regexp);
-//            Matcher matcher = pattern.matcher(rawHtml);
-//
-//            while (matcher.find()){
-//                String w = matcher.group();
-//                if (!visited.contains(w)){
-//                    visited.add(w);
-//                    System.out.println("Website found: " + w);
-//                    queue.add(w);
-//                }
-//            }
-//
-//            visited.add(url);
-//        }
-
-
     }
 
     private String readURL(String node) {
