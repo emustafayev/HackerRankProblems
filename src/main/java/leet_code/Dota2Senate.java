@@ -34,7 +34,7 @@ public class Dota2Senate {
                 dire.addLast(counter);
                 dire.pop();
                 radiant.pop();
-            }else {// Radiant win the battle. Radiant goes to next round
+            } else {// Radiant win the battle. Radiant goes to next round
                 radiant.addLast(counter);
                 radiant.pop();
                 dire.pop();

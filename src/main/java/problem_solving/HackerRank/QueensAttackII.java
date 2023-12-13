@@ -1,6 +1,5 @@
 package problem_solving.HackerRank;
 
-import jdk.jfr.DataAmount;
 
 public class QueensAttackII {
 
