@@ -5,6 +5,11 @@ import java.util.Arrays;
 
 // UnionFind.class
 class UnionFind {
+
+
+    public static void main(String[] args) {
+
+    }
     private int[] root;
 
     public int[] getRoot() {
@@ -52,5 +57,9 @@ public class DisjointSetQuickFind {
         System.out.println(uf.connected(1, 5)); // true
     }
 
+    public final static void nap(){
+
+    }
 
 }
+
