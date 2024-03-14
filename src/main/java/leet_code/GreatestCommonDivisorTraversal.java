@@ -9,7 +9,7 @@ public class GreatestCommonDivisorTraversal {
 
     public boolean canTraverseAllPairs(int[] nums) {
 
-        
+        return false;
 
     }
 

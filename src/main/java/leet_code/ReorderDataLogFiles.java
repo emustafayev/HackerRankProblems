@@ -15,16 +15,17 @@ public class ReorderDataLogFiles {
 
     public String[] reorderLogFiles(String[] logs) {
 
-        Arrays.stream(logs)
-                .map(log -> {
+//        Arrays.stream(logs)
+//                .map(log -> {
+//
+//                    int index = log.indexOf(' ');
+//                    if ()
+//
+//                    return new LogDto(log.split(" ")[0],)
+//                })
+//
 
-                    int index = log.indexOf(' ');
-                    if ()
-
-                    return new LogDto(log.split(" ")[0],)
-                })
-
-
+        return null;
     }
 
 

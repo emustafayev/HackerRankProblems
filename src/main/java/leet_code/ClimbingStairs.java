@@ -4,7 +4,7 @@ public class ClimbingStairs {
 
     public static void main(String[] args) {
 
-        System.out.println(climbStairs2(5));
+        System.out.println(climbStairs2(4));
 
     }
 
