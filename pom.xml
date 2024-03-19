@@ -51,6 +51,14 @@
             <artifactId>java-does-usb</artifactId>
             <version>0.7.1</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.usb4java/libusb4java -->
+        <dependency>
+            <groupId>org.usb4java</groupId>
+            <artifactId>libusb4java</artifactId>
+            <version>1.3.0</version>
+            <type>pom</type>
+        </dependency>
+
 
 
 
