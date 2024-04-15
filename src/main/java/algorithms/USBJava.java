@@ -24,7 +24,7 @@ public class USBJava {
 
     public static void main(String[] args) {
         USBJava usbJava = new USBJava();
-//        usbJava.getUsbRootHoob();
+        usbJava.getUsbRootHoob();
 //
 //        for (var device: Usb.getDevices()){
 //            System.out.println(device);
