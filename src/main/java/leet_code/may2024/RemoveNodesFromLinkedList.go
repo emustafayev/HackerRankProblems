@@ -4,11 +4,6 @@ func main() {
 
 }
 
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
-
 func removeNodes2(head *ListNode) *ListNode {
 	if head.Next == nil {
 		return head
