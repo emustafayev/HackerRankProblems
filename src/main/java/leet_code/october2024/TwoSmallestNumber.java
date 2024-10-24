@@ -17,9 +17,9 @@ public class TwoSmallestNumber {
         int min1 = arr[0];
         int min2 = arr[1];
 
-        if (min1 > min2) {
-            min2 = arr[0];
+        if (arr[0] > arr[1]) {
             min1 = arr[1];
+            min2 = arr[0];
 
         }
 
