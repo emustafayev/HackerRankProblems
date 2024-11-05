@@ -2,20 +2,24 @@ package main
 
 import (
 	"fmt"
-	"github.com/TheAlgorithms/Go/constraints"
 )
 
-func Bubble[T constraints.Ordered](arr []T) []T {
-	swapped := true
-	for swapped {
-		swapped = false
-		for i := 0; i < len(arr)-1; i++ {
-			if arr[i] > arr[i+1] {
-				arr[i], arr[i+1] = arr[i+1], arr[i]
+func Bubble(arr []int) []int {
+	swapped := false
+
+	for i := 0; i < len(arr); i++ {
+
+		for j := 0; j < len(arr)-1; j++ {
+			if arr[j] > arr[j+1] {
+				arr[j], arr[j+1] = arr[j+1], arr[j]
 				swapped = true
 			}
 		}
+		if !swapped {
+			break
+		}
 	}
+
 	return arr
 }
 
