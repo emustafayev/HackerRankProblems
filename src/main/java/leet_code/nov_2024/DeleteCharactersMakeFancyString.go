@@ -13,7 +13,7 @@ func main() {
 // 6
 func makeFancyString(s string) string {
 
-	for i := 0; i < len(s)-2; {
+	for i := 0; i < lenn(s)-2; {
 		c1 := s[i]
 		c2 := s[i+1]
 		c3 := s[i+2]
