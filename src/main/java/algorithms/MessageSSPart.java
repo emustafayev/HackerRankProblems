@@ -1,5 +1,8 @@
 package algorithms;
 
+import java.util.Arrays;
+import java.util.Objects;
+
 public class MessageSSPart {
     private String name;
     private byte n = 0;
@@ -58,4 +61,30 @@ public class MessageSSPart {
     public void setData(byte[] data) {
         this.data = data;
     }
+
+    public static void main(String[] args) {
+        Float test = 0f;
+
+
+        ScoreResponse scoreResponse = new ScoreResponse();
+
+
+        Float hesabIncomeEstimation =
+                !Objects.isNull(scoreResponse.getHesab_income_zero_flag()) &&
+                        scoreResponse.getHesab_income_zero_flag() ?
+                        0f :
+                        scoreResponse.getHesabIncomeEstimation() != null ? scoreResponse.getHesabIncomeEstimation() : 0f;
+
+    }
+
+    static class ScoreResponse{
+        public Float getHesabIncomeEstimation() {
+            return null;
+        }
+
+        public Boolean getHesab_income_zero_flag() {
+            return null;
+        }
+    }
+
 }
